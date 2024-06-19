@@ -1,0 +1,33 @@
+:root{
+    --fonte-base: sans-serif;
+    --cor-de-fundo: #bcfeff;
+    --cor-de-fonte: #202020;
+    --cor-secundaria: #7bf2fb;
+    --cor-de-fundo-texto:#fffffb;
+    box-sizing: border-box;
+    
+}
+
+
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-base);
+}
+
+.navbar{
+    padding: 2rem;
+    background-color:var(--cor-secundaria);  
+}
+
+footer{
+    background-color:var(--cor-secundaria);
+    height: 100%;
+    width: 100%;  
+}
+
+
+
+
+
+

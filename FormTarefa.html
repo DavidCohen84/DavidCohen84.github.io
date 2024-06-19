@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmanager: Cadastro de Tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/stylesheets/style.css" rel="stylesheet">
+
+</head>
+<body>
+        <div class="container-xl border border-dark pb-3 pt-3">
+            <form>
+                <div class="form-group">
+                    <label for="taskName">Nome da Tarefa</label>
+                    <input type="text" class="form-control" id="taskName" placeholder="Nome da sua tarefa" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDesc">Nome da Tarefa</label>
+                    <textarea class="form-control" id="taskDesc" placeholder="Descrição da sua tarefa (opcional)" rows="3"></textarea>
+                </div>
+                <p>Nível de prioridade</p>
+                <div class="form-check">
+                    <input type="radio" id="prio" name="high" required>
+                    <label for="prio">Alto</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="prio1" name="medium">
+                <label for="prio1">Medio</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="prio2" name="Low">
+                <label for="prio2">baixo</label>
+                </div> 
+                <div class="form-group">
+                    <input type="hidden" id="status" name="status" value="Pendente">
+                </div>
+                <div class="form-group">
+                    <label for="endDate">Data de Término</label>
+                    <input type="date" id="endDate" name="endDate">
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Cadastrar Tarefa</button>             
+            </form>
+            <script>
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth() + 1; //January is 0!
+                var yyyy = today.getFullYear();
+
+                if (dd < 10) {
+                dd = '0' + dd;
+                }
+
+                if (mm < 10) {
+                mm = '0' + mm;
+                } 
+                    
+                today = yyyy + '-' + mm + '-' + dd;
+                document.getElementById("endDate").setAttribute("min", today);
+            </script>
+        </div>
+        
+
+</body>
+</html>
